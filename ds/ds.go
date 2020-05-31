@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"math"
 	"strings"
+
+	"github.com/kpunith8/gosamples/utils"
 )
 
 var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
@@ -179,7 +181,7 @@ func main() {
 
 	fmt.Println(":Function Closures:")
 	// Executing 2 different adders to verify the closure behavior
-	pos, neg := adder(), adder()
+	pos, neg := utils.Adder(), utils.Adder()
 	for i := 0; i < 10; i++ {
 		fmt.Println(
 			pos(i),
@@ -189,13 +191,14 @@ func main() {
 
 }
 
-func adder() func(int) int { // func(int) int, is the return type of the func adder()
-	sum := 0
-	return func(x int) int {
-		sum += x
-		return sum
-	}
-}
+// Adder function closures
+// func Adder() func(int) int { // func(int) int, is the return type of the func adder()
+// 	sum := 0
+// 	return func(x int) int {
+// 		sum += x
+// 		return sum
+// 	}
+// }
 
 func compute(fn func(float64, float64) float64) float64 {
 	return fn(3, 4)

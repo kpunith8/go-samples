@@ -2,6 +2,10 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/kpunith8/gosamples/utils"
+	"github.com/kpunith8/gosamples/utils/consts"
+
 	"math"
 	"math/cmplx"
 	"math/rand"
@@ -87,10 +91,16 @@ func main() {
 	fmt.Println("counting")
 
 	for i := 0; i < 10; i++ {
-		defer fmt.Println(i)
+		// defer fmt.Println(i)
 	}
 
 	fmt.Println("done")
+
+	fmt.Println("Importing module:")
+	add1 := utils.Adder()
+	fmt.Println(add1(10))
+
+	fmt.Println("Getname nested package:", consts.Getname())
 }
 
 func add(x int, y int) int {
