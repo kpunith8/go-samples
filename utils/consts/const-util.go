@@ -1,9 +1,15 @@
 package consts
 
 // Name name
-var Name = "Punith K"
+var name = "Punith K"
+var age = 31
 
 // Getname function
 func Getname() string {
-	return Name
+	return name
+}
+
+// Getage function
+func Getage() int {
+	return age
 }

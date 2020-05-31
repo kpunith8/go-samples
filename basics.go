@@ -100,7 +100,7 @@ func main() {
 	add1 := utils.Adder()
 	fmt.Println(add1(10))
 
-	fmt.Println("Getname nested package:", consts.Getname())
+	fmt.Println("Getname nested package:", consts.Getname(), consts.Getage())
 }
 
 func add(x int, y int) int {
